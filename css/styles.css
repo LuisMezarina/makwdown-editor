@@ -5,16 +5,10 @@
     }
     main {
         padding-bottom: 80px;
+        padding-top: 1rem;
     }
 }
 
-
-.heading-contrast h1 {
-    @apply text-blue-800 text-3xl font-bold mb-4;
-}
-.heading-contrast h2 {
-    @apply text-blue-700 text-2xl font-bold mb-3;
-}
-.heading-contrast h3 {
-    @apply text-blue-600 text-xl font-semibold mb-2;
+.contrast-heading {
+    transition: all 0.3s ease;
 }
