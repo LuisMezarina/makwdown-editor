@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor Markdown</title>
+    <!-- Tailwind CSS via CDN como indicado -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-100">
+    <!-- Barra de herramientas -->
+    <header id="toolbar" class="bg-blue-600 p-4 text-white fixed w-full top-0 md:static">
+        <button id="generate-preview" class="bg-white text-blue-600 px-4 py-2 rounded font-medium">
+            Generar Vista Previa
+        </button>
+    </header>
+
+    <!-- Área principal -->
+    <main class="container mx-auto pt-20 md:pt-4 px-4 flex flex-col md:flex-row gap-4">
+        <!-- Editor -->
+        <section id="editor" class="flex-1 bg-white p-4 rounded-lg shadow">
+            <textarea id="markdown-input" class="w-full h-96 p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Escribe tu markdown aquí...">
+# Título 1
+## Título 2
+### Título 3
+
+- Item de lista
+- Otro item
+
+1. Primer paso
+2. Segundo paso
+            </textarea>
+        </section>
+
+        <!-- Vista previa -->
+        <section id="preview" class="flex-1 bg-white p-4 rounded-lg shadow">
+            <div id="preview-content" class="prose max-w-none"></div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-200 p-4 text-center mt-4">
+        Editor Markdown &copy; 2023
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
