@@ -1,0 +1,20 @@
+@media (max-width: 768px) {
+    #toolbar {
+        top: auto;
+        bottom: 0;
+    }
+    main {
+        padding-bottom: 80px;
+    }
+}
+
+
+.heading-contrast h1 {
+    @apply text-blue-800 text-3xl font-bold mb-4;
+}
+.heading-contrast h2 {
+    @apply text-blue-700 text-2xl font-bold mb-3;
+}
+.heading-contrast h3 {
+    @apply text-blue-600 text-xl font-semibold mb-2;
+}
