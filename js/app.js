@@ -91,3 +91,28 @@ previewBtn.addEventListener("click", () => {
     preview.innerHTML = "";
   }
 });
+
+
+const toggleDarkModeBtn = document.getElementById('toggle-darkmode');
+const body = document.body;
+
+function applyDarkMode(dark) {
+    if (dark) {
+        body.classList.add('bg-gray-900', 'text-white');
+        body.classList.remove('bg-gray-100', 'text-black');
+        toggleDarkModeBtn.textContent = 'Modo Claro';
+    } else {
+        body.classList.add('bg-gray-100', 'text-black');
+        body.classList.remove('bg-gray-900', 'text-white');
+        toggleDarkModeBtn.textContent = 'Modo Oscuro';
+    }
+}
+
+let darkMode = false;
+
+toggleDarkModeBtn.addEventListener('click', () => {
+    darkMode = !darkMode;
+    applyDarkMode(darkMode);
+});
+
+
